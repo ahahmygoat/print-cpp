@@ -18,6 +18,10 @@ double percent_gain(double ending, double initial){
 int main(){
     double principal, rate;
     int years;
+    
+    std::cout << "So the choice is yours..." << std::endl;
+    std::cout << "1. Invest your $$ or 2. leverage your $$" << std::endl;
+    std::cout << "Buy a house?" << std::endl;
 
     std::cout << "Enter principal: " << std::endl;
     std::cin >> principal;
@@ -28,7 +32,6 @@ int main(){
     std::cout << "Enter number of years: " << std::endl;
     std::cin >> years;
 
-    loan(principal, rate, years);
     std::cout << "The total: " << std::endl;
 
     rate /= 100;
@@ -40,7 +43,7 @@ int main(){
     std::cout << "\nCompound Interest Total: $" << compound_amt << std::endl;
     std::cout << "Total gain: " << percent_gain(compound_amt, principal) << "%" << std::endl;
     std::cout << "Simple Loan total: $" << loan_amt << std::endl;
-    std::cout << "Total gain: " << percent_gain(loan_amt, principal) <<" %" << std::endl;
-
+    std::cout << "So what ever you did if you bought a house well you own an asset of $" << principal << " + appreciation?" << std::endl;
+    std::cout << " The banker Bankers gain: " << percent_gain(loan_amt, principal) <<" %" << std::endl;
         return 0;
 }
